@@ -2,6 +2,8 @@
 
 pre-commit:
   parallel: true
+  stage_fixed: true
+  root: "."
   commands:
     lint-md:
       run: pnpm prettier --cache --ignore-unknown --write {staged_files}
@@ -30,4 +32,4 @@ post-merge:
 commit-msg:
   commands:
     commitlint:
-      run: pnpm exec commitlint --edit $1
+      run: pnpm exec commitlint --edit {1}
