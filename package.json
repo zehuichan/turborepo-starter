@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare": "lefthook install",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "eslint . --cache && prettier . --ignore-unknown --check --cache && stylelint \"**/*.{vue,css,less,scss}\" --cache",
@@ -17,12 +18,15 @@
     "catalog": "pnpx codemod pnpm/catalog"
   },
   "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@repo/commitlint-config": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "cspell": "catalog:",
     "eslint": "catalog:",
+    "lefthook": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "stylelint": "catalog:",
