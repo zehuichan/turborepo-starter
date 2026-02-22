@@ -75,7 +75,7 @@ watch(count, (newVal, oldVal) => {
 watch(
   () => props.id,
   (id) => fetchData(id),
-  { immediate: true }
+  { immediate: true },
 );
 
 // Watch multiple sources

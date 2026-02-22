@@ -21,15 +21,15 @@ metadata:
 
 ## Core
 
-| Topic                  | Description                                                                                                 | Reference                                                |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| Script Setup & Macros  | `<script setup>`, defineProps, defineEmits, defineModel, defineExpose, defineOptions, defineSlots, generics | [script-setup-macros](references/script-setup-macros.md) |
-| Reactivity & Lifecycle | ref, shallowRef, computed, watch, watchEffect, effectScope, lifecycle hooks, composables                    | [core-new-apis](references/core-new-apis.md)             |
+| Topic | Description | Reference |
+| --- | --- | --- |
+| Script Setup & Macros | `<script setup>`, defineProps, defineEmits, defineModel, defineExpose, defineOptions, defineSlots, generics | [script-setup-macros](references/script-setup-macros.md) |
+| Reactivity & Lifecycle | ref, shallowRef, computed, watch, watchEffect, effectScope, lifecycle hooks, composables | [core-new-apis](references/core-new-apis.md) |
 
 ## Features
 
-| Topic                            | Description                                                          | Reference                                            |
-| -------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------- |
+| Topic | Description | Reference |
+| --- | --- | --- |
 | Built-in Components & Directives | Transition, Teleport, Suspense, KeepAlive, v-memo, custom directives | [advanced-patterns](references/advanced-patterns.md) |
 
 ## Quick Reference
@@ -57,7 +57,7 @@ watch(
   () => props.title,
   (newVal) => {
     console.log('Title changed:', newVal);
-  }
+  },
 );
 
 onMounted(() => {
@@ -74,7 +74,16 @@ onMounted(() => {
 
 ```ts
 // Reactivity
-import { ref, shallowRef, computed, reactive, readonly, toRef, toRefs, toValue } from 'vue';
+import {
+  ref,
+  shallowRef,
+  computed,
+  reactive,
+  readonly,
+  toRef,
+  toRefs,
+  toValue,
+} from 'vue';
 
 // Watchers
 import { watch, watchEffect, watchPostEffect, onWatcherCleanup } from 'vue';
