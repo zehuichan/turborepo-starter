@@ -1,0 +1,17 @@
+# 依赖与构建产物
+node_modules
+dist
+coverage
+.turbo
+*.min.js
+
+# 锁文件
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 其他
+.git
+
+**/*.svg
+**/*.sh

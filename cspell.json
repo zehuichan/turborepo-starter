@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "anthropics",
+    "codemod",
+    "commitlint",
+    "cspell",
+    "eslint",
+    "HMR",
+    "pnpm",
+    "prettier",
+    "taze",
+    "tsc",
+    "turborepo",
+    "typescript",
+    "vite",
+    "vue"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "coverage",
+    ".git",
+    "*.lock",
+    "pnpm-lock.yaml",
+    ".turbo",
+    "*.min.js"
+  ],
+  "allowCompoundWords": true
+}

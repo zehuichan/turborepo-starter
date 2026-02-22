@@ -1,0 +1,39 @@
+{
+  "name": "turborepo-starter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "eslint . --cache && prettier . --ignore-unknown --check --cache && stylelint \"**/*.{vue,css,less,scss}\" --cache",
+    "format": "stylelint \"**/*.{vue,css,less,scss}\" --cache --fix && eslint . --cache --fix && prettier . --write --cache --log-level warn",
+    "check:cspell": "cspell lint **/*.ts **/README.md --no-progress",
+    "clean": "node ./scripts/clean.mjs",
+    "postinstall": "pnpm -r run stub --if-present",
+    "preinstall": "npx only-allow pnpm",
+    "reinstall": "pnpm clean --del-lock && pnpm install",
+    "update:deps": "npx taze -r -w",
+    "catalog": "pnpx codemod pnpm/catalog"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/stylelint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "cspell": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "stylelint": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "unbuild": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "engines": {
+    "node": ">=20.19.0",
+    "pnpm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@10.30.1"
+}
