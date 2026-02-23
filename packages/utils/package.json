@@ -4,14 +4,9 @@
   "private": true,
   "license": "MIT",
   "exports": {
-    ".": "./src/index.ts",
-    "./format": "./src/format.ts"
-  },
-  "scripts": {
-    "lint": "eslint \"**/*.ts\"",
-    "build": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
   }
 }
